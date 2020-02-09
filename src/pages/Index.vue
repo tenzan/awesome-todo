@@ -2,7 +2,8 @@
   <q-page padding>
     <input v-model="message" @keyup.esc="clearMessage" @keyup.enter="alertMessage" />
     <button @click="clearMessage">Clear</button>
-    <h5 class="border-grey" v-show="message.length">{{message}}</h5>
+    <h5 v-if="message.length" class="border-grey">{{message}}</h5>
+    <h6 v-else>No message entered ☹️</h6>
   </q-page>
 </template>
 
